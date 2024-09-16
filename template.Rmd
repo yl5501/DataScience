@@ -56,7 +56,7 @@ la_df =
   tibble(
     norm_samp = rnorm(n = 500, mean = 1),
     samp_g0 = norm_samp > 0,
-    obs_v_samp = obs(norm_samp)
+    obs_v_samp = abs(norm_samp)
   )
 
   ggplot(la_df, aes(x = abs_norm_samp)) + 
