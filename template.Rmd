@@ -59,8 +59,11 @@ la_df =
     obs_v_samp = abs(norm_samp)
   )
 
-  ggplot(la_df, aes(x = abs_norm_samp)) + 
-    geom_histogram()
+ggplot(la_df, aes(x = obs_v_samp)) + 
+    geom_histogram(binwidth = 0.2, fill = "blue", color = "black") +  # Customize binwidth and colors
+    labs(title = "Histogram of Absolute Normal Samples",
+         x = "Absolute Value of Normal Sample",
+         y = "Count")
 ```
 
 text formatting 
@@ -105,3 +108,5 @@ First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
+
+change
